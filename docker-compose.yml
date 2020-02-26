@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  app:
+    image: stsaens/resume
+    build: .
+    container_name: resume
+    restart: always
+    environment:
+      - VIRTUAL_HOST=resume.stsaens.com
+      - VIRTUAL_PORT=6060
+    networks:
+      - nginx-proxy
+      - default
+networks:
+  nginx-proxy:
+    external:
+      name: nginx-proxy_default
