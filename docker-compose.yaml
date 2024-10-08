@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   app:
@@ -7,7 +7,7 @@ services:
     container_name: resume
     restart: always
     environment:
-      - VIRTUAL_HOST=resume.stsaens.com
+      - VIRTUAL_HOST=resume.jungmin.kim
       - VIRTUAL_PORT=6060
     networks:
       - nginx-proxy
@@ -15,4 +15,4 @@ services:
 networks:
   nginx-proxy:
     external:
-      name: nginx-proxy_default
+      name: nginx-proxy
