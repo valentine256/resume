@@ -7,8 +7,10 @@ services:
     container_name: resume
     restart: always
     environment:
-      - VIRTUAL_HOST=resume.jungmin.kim
-      - VIRTUAL_PORT=6060
+      VIRTUAL_HOST: resume.jungmin.kim
+      VIRTUAL_PORT: 6060
+      LETSENCRYPT_HOST: resume.jungmin.kim
+      LETSENCRYPT_EMAIL: icarmenjm@gmail.com
     networks:
       - nginx-proxy
       - default
